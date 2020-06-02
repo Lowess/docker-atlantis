@@ -12,7 +12,7 @@ NC = \033[0m # No Color
 
 build:
 	@echo "Building Docker image (export VERSION=<version> if needed)"
-	docker build . -t $(DOCKER_REGISTRY)/$(APP):$(VERSION)
+	docker build . -t $(DOCKER_REGISTRY)/$(APP):$(VERSION) --no-cache
 
 	@echo "\n$(BLUE)|- Run it with:$(NC)\n"
 	@sed -n '/#--runit--/,/$(DOCKER_REGISTRY)\/$(APP)/p' README.md
