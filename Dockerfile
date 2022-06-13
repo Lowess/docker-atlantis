@@ -5,7 +5,7 @@ FROM lowess/terragrunt:0.14.11 as tools0.14
 FROM lowess/terragrunt:1.0.11 as tools1.0
 
 # Official atlantis image
-FROM runatlantis/atlantis:v0.18.2
+FROM ghcr.io/runatlantis/atlantis:v0.19.4
 
 ENV DEFAULT_TERRAGRUNT_VERSION=0.23.10
 
